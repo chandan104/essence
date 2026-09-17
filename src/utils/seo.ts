@@ -16,6 +16,7 @@ export function generateLocalBusinessSchema() {
     "description": siteConfig.brand.shortDescription,
     "url": siteConfig.meta.siteUrl,
     "image": siteConfig.meta.ogImage,
+    "telephone": siteConfig.contact.phoneNumber,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.location.street,

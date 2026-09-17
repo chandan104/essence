@@ -72,10 +72,10 @@ export const siteConfig: SiteConfig = {
       "https://maps.google.com/?q=Church+Road+Dimapur+Nagaland",
   },
   contact: {
-    whatsappNumber: "919876543210",
-    whatsappDisplay: "+91 98765 43210 (Studio WhatsApp)",
-    phoneNumber: "+919876543210",
-    phoneDisplay: "+91 98765 43210 (Appointments)",
+    whatsappNumber: "916002435804",
+    whatsappDisplay: "+91 60024 35804 (Studio WhatsApp)",
+    phoneNumber: "+916002435804",
+    phoneDisplay: "+91 60024 35804 (Appointments)",
     email: "appointments@essencedimapur.com",
   },
   hours: {
