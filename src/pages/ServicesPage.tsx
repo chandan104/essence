@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, ArrowRight, Sparkles, MessageCircle } from "lucide-react";
-import { servicesData, serviceCategories, ServiceCategory } from "../data/servicesData";
+import { useServices } from "../context/ServicesContext";
+import { ServiceCategory } from "../data/servicesData";
 import { SeoHead } from "../components/common/SeoHead";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { generateBreadcrumbSchema } from "../utils/seo";
@@ -13,10 +14,11 @@ interface ServicesPageProps {
 }
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenBooking }) => {
+  const { services, categories: serviceCategories } = useServices();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const filteredServices = servicesData.filter((service) => {
+  const filteredServices = services.filter((service) => {
     const matchesCategory =
       selectedCategory === "all" || service.category === selectedCategory;
     const matchesSearch =
@@ -25,6 +27,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenBooking }) => 
       service.categoryName.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
 
   const breadcrumbsSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
@@ -71,7 +74,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenBooking }) => 
                   : "bg-white text-studio-charcoal border-studio-border hover:border-champagne-500"
               }`}
             >
-              All ({servicesData.length})
+              All ({services.length})
             </button>
             {serviceCategories.map((cat) => (
               <button
@@ -83,7 +86,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenBooking }) => 
                     : "bg-white text-studio-charcoal border-studio-border hover:border-champagne-500"
                 }`}
               >
-                {cat.name} ({servicesData.filter((s) => s.category === cat.id).length})
+                {cat.name} ({services.filter((s) => s.category === cat.id).length})
               </button>
             ))}
           </div>

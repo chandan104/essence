@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { X, ChevronRight, MessageCircle, Phone, MapPin, Sparkles } from "lucide-react";
-import { serviceCategories, servicesData } from "../../data/servicesData";
+import { useServices } from "../../context/ServicesContext";
 import { siteConfig, buildWhatsAppLink } from "../../config/siteConfig";
 
 interface MobileNavProps {
@@ -11,6 +11,7 @@ interface MobileNavProps {
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, onOpenBooking }) => {
+  const { services: servicesData, categories: serviceCategories } = useServices();
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   if (!isOpen) return null;

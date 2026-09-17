@@ -10,7 +10,8 @@ import {
   ChevronRight,
   Flame,
 } from "lucide-react";
-import { servicesData, ServiceItem } from "../../data/servicesData";
+import { useServices } from "../../context/ServicesContext";
+import { ServiceItem } from "../../data/servicesData";
 import { SectionHeading } from "../common/SectionHeading";
 import { analytics } from "../../utils/analytics";
 
@@ -21,24 +22,12 @@ interface SignatureServicesProps {
 export const SignatureServices: React.FC<SignatureServicesProps> = ({ onOpenBooking }) => {
   const [isPaused, setIsPaused] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const { services } = useServices();
 
-  // Standout signature services to showcase
-  const featuredSlugs = [
-    "hair-botox",
-    "nanoplastia",
-    "hair-colour",
-    "hair-extensions",
-    "acrylic-extensions",
-    "hydra-facial",
-    "eyelash-extensions",
-    "microblading",
-    "anime-lashes",
-    "nail-art",
-  ];
+  const featuredServices = services.filter((s) => s.featured);
+  const featuredList: ServiceItem[] =
+    featuredServices.length > 0 ? featuredServices : services.slice(0, 10);
 
-  const featuredList: ServiceItem[] = servicesData.filter((s) =>
-    featuredSlugs.includes(s.slug)
-  );
 
   // Manual scroll controls for user convenience
   const handleScrollLeft = () => {

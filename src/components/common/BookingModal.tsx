@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { X, Calendar, Clock, User, Phone, MessageSquare, Sparkles, Send } from "lucide-react";
-import { servicesData, ServiceItem } from "../../data/servicesData";
+import { useServices } from "../../context/ServicesContext";
+import { ServiceItem } from "../../data/servicesData";
 import { siteConfig, buildWhatsAppLink } from "../../config/siteConfig";
 import { analytics } from "../../utils/analytics";
 
@@ -15,6 +16,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   onClose,
   preselectedServiceId,
 }) => {
+  const { services } = useServices();
   const [selectedService, setSelectedService] = useState<string>(preselectedServiceId || "");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -43,7 +45,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   if (!isOpen) return null;
 
-  const currentServiceObj: ServiceItem | undefined = servicesData.find(
+  const currentServiceObj: ServiceItem | undefined = services.find(
     (s) => s.id === selectedService || s.slug === selectedService
   );
 
@@ -129,7 +131,7 @@ Hi Essence Hair & Makeup Studio, I would like to confirm availability for this a
             >
               <option value="">Select a service...</option>
               <optgroup label="Hair Studio">
-                {servicesData
+                {services
                   .filter((s) => s.category === "hair")
                   .map((s) => (
                     <option key={s.id} value={s.id}>
@@ -138,7 +140,7 @@ Hi Essence Hair & Makeup Studio, I would like to confirm availability for this a
                   ))}
               </optgroup>
               <optgroup label="Nail Lounge">
-                {servicesData
+                {services
                   .filter((s) => s.category === "nails")
                   .map((s) => (
                     <option key={s.id} value={s.id}>
@@ -147,7 +149,7 @@ Hi Essence Hair & Makeup Studio, I would like to confirm availability for this a
                   ))}
               </optgroup>
               <optgroup label="Skin & Facials">
-                {servicesData
+                {services
                   .filter((s) => s.category === "skin")
                   .map((s) => (
                     <option key={s.id} value={s.id}>
@@ -156,7 +158,7 @@ Hi Essence Hair & Makeup Studio, I would like to confirm availability for this a
                   ))}
               </optgroup>
               <optgroup label="Lash Bar">
-                {servicesData
+                {services
                   .filter((s) => s.category === "lashes")
                   .map((s) => (
                     <option key={s.id} value={s.id}>
@@ -165,7 +167,7 @@ Hi Essence Hair & Makeup Studio, I would like to confirm availability for this a
                   ))}
               </optgroup>
               <optgroup label="Brow Studio">
-                {servicesData
+                {services
                   .filter((s) => s.category === "brows")
                   .map((s) => (
                     <option key={s.id} value={s.id}>

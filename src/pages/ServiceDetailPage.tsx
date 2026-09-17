@@ -12,7 +12,8 @@ import {
   ShieldCheck,
   Calendar,
 } from "lucide-react";
-import { servicesData, ServiceItem } from "../data/servicesData";
+import { useServices } from "../context/ServicesContext";
+import { ServiceItem } from "../data/servicesData";
 import { galleryItems } from "../data/galleryData";
 import { SeoHead } from "../components/common/SeoHead";
 import { SectionHeading } from "../components/common/SectionHeading";
@@ -30,19 +31,19 @@ interface ServiceDetailPageProps {
 
 export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ onOpenBooking }) => {
   const { slug } = useParams<{ slug: string }>();
+  const { services, getServiceBySlug } = useServices();
 
-  const service: ServiceItem | undefined = servicesData.find(
-    (s) => s.slug.toLowerCase() === slug?.toLowerCase()
-  );
+  const service: ServiceItem | undefined = slug ? getServiceBySlug(slug) : undefined;
 
   if (!service) {
     return <Navigate to="/services" replace />;
   }
 
   // Related services in the same category (excluding current)
-  const relatedServices = servicesData
+  const relatedServices = services
     .filter((s) => s.category === service.category && s.id !== service.id)
     .slice(0, 3);
+
 
   // SEO Schemas
   const serviceSchema = generateServiceSchema(service);

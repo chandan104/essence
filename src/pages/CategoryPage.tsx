@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowRight, Sparkles, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
-import { serviceCategories, servicesData, ServiceCategory } from "../data/servicesData";
+import { useServices } from "../context/ServicesContext";
+import { ServiceCategory } from "../data/servicesData";
 import { galleryItems } from "../data/galleryData";
 import { SeoHead } from "../components/common/SeoHead";
 import { SectionHeading } from "../components/common/SectionHeading";
@@ -15,6 +16,7 @@ interface CategoryPageProps {
 
 export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenBooking }) => {
   const { categoryId } = useParams<{ categoryId: string }>();
+  const { services: allServices, categories: serviceCategories } = useServices();
 
   const category = serviceCategories.find(
     (c) => c.id.toLowerCase() === categoryId?.toLowerCase()
@@ -24,7 +26,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenBooking }) => 
     return <Navigate to="/services" replace />;
   }
 
-  const services = servicesData.filter((s) => s.category === category.id);
+  const services = allServices.filter((s) => s.category === category.id);
   const relatedGallery = galleryItems.filter(
     (g) => g.category === category.id || (category.id === "hair" && g.category === "makeup")
   );

@@ -184,11 +184,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
         {/* Bottom Citation & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-studio-ivory/50">
           <p>© 2026 Essence Hair and Makeup Studio. All rights reserved.</p>
-          <p className="flex items-center gap-2">
-            <span>Church Road, Dimapur, Nagaland</span>
-            <span>•</span>
-            <span className="text-champagne-400/80">Premium Beauty & Finishing Studio</span>
-          </p>
+          <div className="flex items-center gap-3">
+            <span className="hidden sm:inline">Church Road, Dimapur, Nagaland</span>
+            <span className="hidden sm:inline">•</span>
+            <Link
+              to="/admin"
+              className="text-champagne-400/60 hover:text-champagne-300 transition-colors uppercase tracking-wider text-[10px]"
+            >
+              Author Portal
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
