@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url>
+    <loc>https://essencedimapur.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/the-essence-edit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Category Pages -->
+  <url>
+    <loc>https://essencedimapur.com/services/hair</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/services/nails</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/services/skin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/services/lashes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essencedimapur.com/services/brows</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hair Services -->
+  <url><loc>https://essencedimapur.com/services/hair-colour</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/hair-extensions</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/hair-smoothing</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/hair-botox</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/nanoplastia</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/hair-spa</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/scalp-treatment</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/perming</loc><priority>0.8</priority></url>
+
+  <!-- Nails Services -->
+  <url><loc>https://essencedimapur.com/services/nail-art</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/acrylic-extensions</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/gel-extensions</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/manicure</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/pedicure</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/toe-nail-extensions</loc><priority>0.8</priority></url>
+
+  <!-- Skin Services -->
+  <url><loc>https://essencedimapur.com/services/facial-cleanup</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/gold-facial</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/brightening-facial</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/anti-aging-facial</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/hydra-facial</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/acne-treatment</loc><priority>0.8</priority></url>
+
+  <!-- Lashes Services -->
+  <url><loc>https://essencedimapur.com/services/eyelash-extensions</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/classic-lashes</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/hybrid-lashes</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/volume-lashes</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/anime-lashes</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/custom-lashes</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/lash-lift</loc><priority>0.8</priority></url>
+
+  <!-- Brows Services -->
+  <url><loc>https://essencedimapur.com/services/microblading</loc><priority>0.8</priority></url>
+  <url><loc>https://essencedimapur.com/services/microshading</loc><priority>0.8</priority></url>
+
+  <!-- Ad Offers -->
+  <url><loc>https://essencedimapur.com/offers/hair-botox</loc><priority>0.7</priority></url>
+  <url><loc>https://essencedimapur.com/offers/hair-colour</loc><priority>0.7</priority></url>
+  <url><loc>https://essencedimapur.com/offers/nail-extensions</loc><priority>0.7</priority></url>
+  <url><loc>https://essencedimapur.com/offers/lash-extensions</loc><priority>0.7</priority></url>
+  <url><loc>https://essencedimapur.com/offers/bridal</loc><priority>0.7</priority></url>
+</urlset>

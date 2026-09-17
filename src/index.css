@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #191614;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: #D9C4A6;
+    color: #191614;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A38054;
+}
+
+/* Image Zoom & Reveal animations */
+.img-editorial {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-editorial:hover {
+  transform: scale(1.04);
+}
+
+/* Subtle texture & grain */
+.bg-grain {
+  background-image: radial-gradient(rgba(25, 22, 20, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glass effect */
+.glass-panel {
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(25, 22, 20, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Infinite moving ticker and moving cards (Just like reference image) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+/* Hover pauses the moving animation so users can interact and click */
+.marquee-paused,
+.animate-marquee-infinite:hover,
+.animate-marquee-slow:hover,
+.animate-marquee-fast:hover {
+  animation-play-state: paused !important;
+}
+
+/* Card glow & elevated hover (just like the highlighted glowing card in user's image) */
+.glow-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(197, 168, 128, 0.4), 0 0 0 2px #C5A880;
+}
