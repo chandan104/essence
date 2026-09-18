@@ -43,7 +43,7 @@ function PublicLayout({
   bookingServiceId?: string;
 }) {
   return (
-    <div className="flex flex-col min-h-screen bg-studio-ivory text-studio-charcoal">
+    <div className="flex flex-col min-h-screen bg-[#040711] text-[#F8FAFC]">
       <Navbar onOpenBooking={onOpenBooking} onOpenMobileMenu={onOpenMobileMenu} />
 
       <main className="flex-1">

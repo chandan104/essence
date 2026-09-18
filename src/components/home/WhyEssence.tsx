@@ -55,8 +55,11 @@ export const WhyEssence: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-studio-cream/30 border-t border-b border-studio-border/60 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 sm:py-32 bg-[#060A14] border-t border-b border-white/10 relative overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-champagne-500/5 blur-[120px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="The Essence Standard"
           title="WHY CHOOSE ESSENCE STUDIO"
@@ -69,33 +72,36 @@ export const WhyEssence: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
         >
           {pillars.map((pillar, idx) => (
             <motion.div
               key={pillar.title}
               variants={pillarVariants}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-studio-ivory border border-studio-border p-8 flex flex-col justify-between hover:border-champagne-500 transition-colors group shadow-subtle rounded-sm"
+              whileHover={{ y: -8, transition: { duration: 0.25, ease: "easeOut" } }}
+              className="relative rounded-2xl bg-[#090E1C]/80 backdrop-blur-xl border border-white/10 p-7 sm:p-8 flex flex-col justify-between hover:border-champagne-400/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)] transition-all duration-300 group overflow-hidden"
             >
+              {/* Subtle top specular shimmer */}
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-champagne-400/30 to-transparent" />
+
               <div>
-                <div className="w-12 h-12 rounded-none bg-studio-cream border border-studio-border flex items-center justify-center mb-6 group-hover:bg-champagne-100 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-champagne-500/10 border border-champagne-500/20 flex items-center justify-center mb-6 group-hover:bg-champagne-500/20 group-hover:border-champagne-400/50 group-hover:scale-105 transition-all duration-300">
                   {pillar.icon}
                 </div>
-                <span className="text-[10px] font-bold tracking-widest text-champagne-600 block mb-1">
+                <span className="text-[10px] font-bold tracking-widest text-champagne-400 block mb-1.5 uppercase font-mono">
                   PILLAR 0{idx + 1}
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl text-studio-espresso font-medium mb-3">
+                <h3 className="font-heading text-lg sm:text-xl text-white font-semibold mb-3 group-hover:text-champagne-200 transition-colors tracking-tight">
                   {pillar.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-studio-taupe leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-studio-border/60 text-[11px] font-medium text-champagne-700">
-                Church Road, Dimapur
+              <div className="mt-8 pt-4 border-t border-white/10 text-[11px] font-medium text-champagne-400/80 flex items-center justify-between">
+                <span>Church Road, Dimapur</span>
+                <span className="text-white/30 text-xs group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </motion.div>
           ))}

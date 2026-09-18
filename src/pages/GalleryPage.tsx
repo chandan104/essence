@@ -42,7 +42,10 @@ export const GalleryPage: React.FC = () => {
   ]);
 
   return (
-    <div className="py-12 sm:py-16 bg-studio-ivory animate-fadeIn">
+    <div className="py-16 sm:py-24 bg-[#040711] text-white animate-fadeIn relative overflow-hidden">
+      {/* Background ambient lighting */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-champagne-500/5 blur-[140px] pointer-events-none" />
+
       <SeoHead
         title="Visual Portfolio & Hair Transformations | Essence Studio Dimapur"
         description="Explore the curated visual gallery of hair transformations, nail extensions, lash mapping, and skin radiance created at Essence Hair and Makeup Studio, Church Road, Dimapur."
@@ -51,26 +54,26 @@ export const GalleryPage: React.FC = () => {
         jsonLd={breadcrumbsSchema}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-6 h-px bg-champagne-500" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-champagne-600">
+            <span className="w-8 h-px bg-gradient-to-r from-transparent to-champagne-400" />
+            <span className="text-xs font-semibold tracking-widest uppercase text-champagne-400 font-mono">
               Curated Transformations
             </span>
-            <span className="w-6 h-px bg-champagne-500" />
+            <span className="w-8 h-px bg-gradient-to-l from-transparent to-champagne-400" />
           </div>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-studio-espresso font-medium tracking-tight">
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-white font-semibold tracking-tight">
             VISUAL PORTFOLIO
           </h1>
-          <p className="mt-4 text-sm sm:text-base text-studio-taupe leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed font-light max-w-2xl mx-auto">
             Real artistry from our styling chairs on Church Road, Dimapur. Browse through our finishes across hair, nails, skin, lashes, and brows.
           </p>
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-14">
           {filterCategories.map((cat) => {
             const isActive = activeFilter === cat.id;
             return (
@@ -80,10 +83,10 @@ export const GalleryPage: React.FC = () => {
                   setActiveFilter(cat.id);
                   analytics.trackGalleryView(cat.id);
                 }}
-                className={`px-5 py-2 text-xs font-semibold uppercase tracking-luxury transition-all border ${
+                className={`px-5 py-2.5 text-xs font-semibold uppercase tracking-luxury transition-all rounded-full border ${
                   isActive
-                    ? "bg-studio-espresso text-studio-ivory border-studio-espresso shadow-sm"
-                    : "bg-white text-studio-charcoal border-studio-border hover:border-champagne-500"
+                    ? "bg-champagne-500 text-black border-champagne-500 font-bold shadow-[0_4px_16px_rgba(200,169,126,0.3)]"
+                    : "bg-white/5 text-slate-300 border-white/10 hover:border-champagne-400/40 hover:text-white backdrop-blur-md"
                 }`}
               >
                 {cat.label}
@@ -98,35 +101,35 @@ export const GalleryPage: React.FC = () => {
             <div
               key={item.id}
               onClick={() => openLightboxForIndex(idx)}
-              className="group relative cursor-pointer overflow-hidden bg-studio-espresso border border-studio-border aspect-[4/5] shadow-subtle hover:shadow-elevated transition-all"
+              className="group relative cursor-pointer overflow-hidden rounded-2xl bg-[#090E1C] border border-white/10 aspect-[4/5] shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-champagne-400/40 transition-all duration-300"
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover img-editorial opacity-90 group-hover:opacity-100 group-hover:scale-105"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
 
               {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-studio-dark/90 via-studio-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-between">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#040711]/95 via-[#040711]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-between">
                 <div className="flex justify-end">
-                  <span className="p-2 rounded-full bg-white/20 text-studio-ivory backdrop-blur-sm">
-                    <Maximize2 className="w-4 h-4" />
+                  <span className="p-2.5 rounded-full bg-white/10 text-white backdrop-blur-md border border-white/15">
+                    <Maximize2 className="w-4 h-4 text-champagne-300" />
                   </span>
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-semibold tracking-widest uppercase text-champagne-400 block mb-1">
+                  <span className="text-[10px] font-semibold tracking-widest uppercase text-champagne-400 block mb-1 font-mono">
                     {item.categoryLabel}
                   </span>
-                  <h3 className="font-serif text-xl text-studio-ivory font-medium">
+                  <h3 className="font-heading text-xl text-white font-semibold tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-champagne-100/80 mt-1 line-clamp-2">
+                  <p className="text-xs text-slate-300 mt-1 line-clamp-2 font-light">
                     {item.caption}
                   </p>
-                  <span className="mt-3 inline-flex items-center gap-1.5 text-[11px] uppercase font-semibold text-champagne-300">
-                    <span>Click to inspect</span>
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-[11px] uppercase font-semibold text-champagne-400">
+                    <span>Click to inspect →</span>
                   </span>
                 </div>
               </div>
@@ -135,22 +138,24 @@ export const GalleryPage: React.FC = () => {
         </div>
 
         {/* Bottom Consultation CTA */}
-        <div className="mt-16 p-8 bg-studio-cream/40 border border-studio-border text-center max-w-3xl mx-auto">
-          <Sparkles className="w-6 h-6 text-champagne-600 mx-auto mb-3" />
-          <h3 className="font-serif text-2xl text-studio-espresso font-medium">
+        <div className="mt-20 p-8 sm:p-12 rounded-2xl bg-[#090E1C]/80 backdrop-blur-xl border border-white/10 text-center max-w-3xl mx-auto shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+          <div className="w-12 h-12 rounded-xl bg-champagne-500/10 border border-champagne-500/20 flex items-center justify-center mx-auto mb-4">
+            <Sparkles className="w-6 h-6 text-champagne-400" />
+          </div>
+          <h3 className="font-heading text-2xl sm:text-3xl text-white font-semibold tracking-tight">
             Have a specific style in mind?
           </h3>
-          <p className="text-xs sm:text-sm text-studio-taupe mt-2 max-w-md mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-md mx-auto leading-relaxed font-light">
             Send us your inspiration picture on WhatsApp. Our master stylists will confirm feasibility, recommended technique, and appointment duration.
           </p>
-          <div className="mt-6">
+          <div className="mt-8">
             <a
               href={buildWhatsAppLink("Hi Essence Studio, I have an inspiration photo from your gallery/Instagram that I'd like to consult on.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-studio-espresso text-studio-ivory hover:bg-champagne-600 hover:text-studio-espresso text-xs font-semibold uppercase tracking-widest transition-colors"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-champagne-500 hover:bg-champagne-400 text-black text-xs font-bold uppercase tracking-widest shadow-[0_4px_16px_rgba(200,169,126,0.3)] transition-all"
             >
-              <MessageCircle className="w-4 h-4 text-champagne-400" />
+              <MessageCircle className="w-4 h-4 text-black" />
               <span>Share Inspiration via WhatsApp</span>
             </a>
           </div>

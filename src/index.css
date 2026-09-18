@@ -6,37 +6,40 @@
   html {
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
+    background-color: #040711;
+    color: #F8FAFC;
   }
 
   body {
-    background-color: #FAF8F5;
-    color: #191614;
+    background-color: #040711;
+    color: #F8FAFC;
+    font-family: "Sora", "Plus Jakarta Sans", system-ui, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   ::selection {
-    background-color: #D9C4A6;
-    color: #191614;
+    background-color: #B8966C;
+    color: #040711;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Sleek Dark Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
+  background: #040711;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C5A880;
+  background: #473B2B;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A38054;
+  background: #B8966C;
 }
 
 /* Image Zoom & Reveal animations */
@@ -50,21 +53,24 @@
 
 /* Subtle texture & grain */
 .bg-grain {
-  background-image: radial-gradient(rgba(25, 22, 20, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
   background-size: 24px 24px;
 }
 
-/* Glass effect */
+/* Liquid Glass Panels */
 .glass-panel {
-  background: rgba(250, 248, 245, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(11, 17, 32, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.glass-dark {
-  background: rgba(25, 22, 20, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 100%), rgba(8, 13, 26, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
 }
 
 /* Infinite moving ticker and moving cards (Just like reference image) */

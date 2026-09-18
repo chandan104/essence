@@ -8,15 +8,15 @@ export default {
     extend: {
       colors: {
         studio: {
-          ivory: "#FAF8F5",
-          cream: "#F4EFE6",
-          sand: "#E9E3D8",
-          charcoal: "#2B2724",
-          espresso: "#191614",
-          dark: "#12100E",
-          taupe: "#8C827A",
-          muted: "#A89F96",
-          border: "#E4DCD0",
+          ivory: "#070C18",      // Dark obsidian replacement for previous ivory
+          cream: "#0B1120",      // Deep midnight replacement for previous cream
+          sand: "#111827",
+          charcoal: "#0F172A",
+          espresso: "#040711",   // Deepest dark canvas
+          dark: "#03060C",
+          taupe: "#94A3B8",      // Crisp readable silver-slate text
+          muted: "#64748B",
+          border: "rgba(255, 255, 255, 0.1)", // Glass hairline border
         },
         champagne: {
           50: "#FAF7F2",
@@ -32,8 +32,8 @@ export default {
         }
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        serif: ['"Sora"', '"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['"Sora"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         widest: '.2em',

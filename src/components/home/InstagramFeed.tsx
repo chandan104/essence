@@ -26,8 +26,11 @@ export const InstagramFeed: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-studio-ivory relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 sm:py-32 bg-[#040711] relative overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute -bottom-20 left-1/3 w-[600px] h-[250px] bg-champagne-500/5 blur-[100px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-4">
           <SectionHeading
             align="left"
@@ -41,11 +44,11 @@ export const InstagramFeed: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => analytics.trackInstagramClick()}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-studio-espresso text-studio-ivory hover:bg-champagne-600 hover:text-studio-espresso text-xs font-semibold uppercase tracking-luxury transition-colors self-start sm:self-auto group"
+            className="inline-flex items-center gap-2.5 px-6 py-3 bg-white/10 hover:bg-white/15 text-white border border-white/15 hover:border-champagne-400/40 rounded-full backdrop-blur-md text-xs font-semibold uppercase tracking-luxury transition-all self-start sm:self-auto group shadow-sm"
           >
-            <InstagramIcon className="w-4 h-4 text-champagne-400 group-hover:text-studio-espresso" />
+            <InstagramIcon className="w-4 h-4 text-champagne-400 group-hover:scale-110 transition-transform" />
             <span>{siteConfig.social.instagramHandle}</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-3.5 h-3.5 text-champagne-400" />
           </a>
         </div>
 
@@ -58,24 +61,28 @@ export const InstagramFeed: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => analytics.trackInstagramClick()}
-              className="group relative aspect-square overflow-hidden bg-studio-cream border border-studio-border block"
+              className="group relative aspect-square overflow-hidden rounded-2xl bg-[#090E1C] border border-white/10 block shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
             >
               <img
                 src={post.image}
                 alt="Instagram post preview"
-                className="w-full h-full object-cover img-editorial"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-studio-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between text-studio-ivory">
+              <div className="absolute inset-0 bg-[#040711]/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between text-white">
                 <div className="flex justify-end">
-                  <InstagramIcon className="w-5 h-5 text-champagne-300" />
+                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md">
+                    <InstagramIcon className="w-4 h-4 text-champagne-300" />
+                  </div>
                 </div>
-                <p className="text-xs text-champagne-100/90 line-clamp-3 leading-relaxed">
-                  {post.caption}
-                </p>
-                <span className="text-[10px] tracking-widest uppercase text-champagne-400 font-semibold">
-                  View On Instagram →
-                </span>
+                <div>
+                  <p className="text-xs text-slate-200 line-clamp-3 leading-relaxed font-light mb-3">
+                    {post.caption}
+                  </p>
+                  <span className="text-[10px] tracking-widest uppercase text-champagne-400 font-semibold flex items-center gap-1">
+                    View On Instagram <ArrowUpRight className="w-3 h-3" />
+                  </span>
+                </div>
               </div>
             </a>
           ))}
