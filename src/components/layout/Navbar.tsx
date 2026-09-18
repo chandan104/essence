@@ -6,6 +6,7 @@ import { siteConfig } from "../../config/siteConfig";
 import { serviceCategories } from "../../data/servicesData";
 import { Button } from "../common/Button";
 import { Link000 } from "../ui/skiper-ui/skiper40";
+import { LiquidGlassButton } from "../ui/liquid-glass-button";
 
 interface NavbarProps {
   onOpenBooking: (serviceId?: string) => void;
@@ -174,28 +175,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenMobileMenu 
 
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                variant="champagne"
-                size="sm"
-                onClick={() => onOpenBooking()}
-                className="shadow-sm"
-              >
-                Book Appointment
-              </Button>
-            </motion.div>
+            <LiquidGlassButton
+              variant="champagne"
+              size="sm"
+              onClick={() => onOpenBooking()}
+            >
+              Book Appointment
+            </LiquidGlassButton>
           </div>
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2.5 lg:hidden">
-            <Button
+            <LiquidGlassButton
               variant="champagne"
               size="sm"
               onClick={() => onOpenBooking()}
-              className="py-1.5 px-3 text-[11px]"
+              className="py-1.5 px-3.5 text-[11px]"
             >
               Book
-            </Button>
+            </LiquidGlassButton>
             <button
               onClick={onOpenMobileMenu}
               className="p-2 text-studio-espresso hover:text-champagne-600 transition-colors"

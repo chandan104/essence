@@ -4,6 +4,7 @@ import { MapPin, ArrowDown, Sparkles, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { BorderBeam } from "../ui/border-beam";
 import { Link001 } from "../ui/skiper-ui/skiper40";
+import { LiquidGlassButton } from "../ui/liquid-glass-button";
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -37,7 +38,7 @@ const itemFadeUp = {
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
     <section className="relative min-h-[94vh] flex items-center justify-center overflow-hidden bg-studio-espresso text-studio-ivory -mt-20 sm:-mt-24 pt-24 pb-16">
-      {/* Editorial Background Image with Cinematic Overlay */}
+      {/* Editorial Background Image with Cinematic Overlay & Atmospheric Video */}
       <motion.div
         initial={{ scale: 1.12, opacity: 0 }}
         animate={{ scale: 1.03, opacity: 0.32 }}
@@ -49,9 +50,30 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           alt="Essence Studio Dimapur"
           className="w-full h-full object-cover object-center"
         />
-        {/* Subtle Vignette & Warm Golden Ambient Glow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-studio-espresso via-studio-espresso/60 to-studio-espresso/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,168,128,0.22)_0%,transparent_65%)]" />
+
+        {/* Atmospheric Looping Video Layer (from Neural Pathway & motionsites) */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-screen pointer-events-none select-none"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/130837c4-0244-4f37-9c61-8d801d93fd29.jpg"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_104303_0c6d60b2-9353-408e-9449-585108a22fb5.mp4"
+        />
+
+        {/* Atmospheric Veil Lighting */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: `
+              radial-gradient(140% 60% at 50% 40%, rgba(18, 14, 11, 0.45) 0%, rgba(18, 14, 11, 0.20) 50%, transparent 100%),
+              linear-gradient(180deg, rgba(18, 14, 11, 0.15) 0%, rgba(18, 14, 11, 0.65) 65%, rgba(18, 14, 11, 0.95) 100%)
+            `,
+          }}
+        />
       </motion.div>
 
       {/* Hero Content Container with Framer Motion Stagger */}
@@ -80,9 +102,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           </div>
         </motion.div>
 
-        {/* Main Headline */}
+        {/* Main Headline with Typographic Reveal Wipe */}
         <motion.h1
-          variants={itemFadeUp}
+          initial={{ clipPath: "inset(-0.78em 0 100% 0)", opacity: 0, y: 16 }}
+          animate={{ clipPath: "inset(-0.78em 0 -0.78em 0)", opacity: 1, y: 0 }}
+          transition={{ duration: 0.95, ease: [0.16, 1, 0.3, 1] as const, delay: 0.25 }}
           className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight leading-[1.08] text-studio-ivory"
         >
           <span className="block">YOUR BEAUTY.</span>
@@ -129,24 +153,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           <span className="text-champagne-200/70">Trusted by Women across Nagaland</span>
         </motion.div>
 
-        {/* Interactive CTAs with tactile Framer Motion physics */}
+        {/* Interactive Liquid Glass CTAs */}
         <motion.div
           variants={itemFadeUp}
           className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
         >
-          <motion.button
+          <LiquidGlassButton
             onClick={onOpenBooking}
-            whileHover={{ scale: 1.03, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 400, damping: 20 }}
-            className="w-full sm:w-auto px-8 py-4 bg-champagne-500 hover:bg-champagne-400 text-studio-espresso text-xs font-semibold uppercase tracking-widest transition-colors flex items-center justify-center gap-2.5 rounded-full shadow-elevated cursor-pointer"
+            size="lg"
+            variant="champagne"
+            className="w-full sm:w-auto"
           >
-            <Sparkles className="w-4 h-4 text-studio-espresso" />
+            <Sparkles className="w-4 h-4 text-champagne-300" />
             <span>Book An Appointment</span>
-          </motion.button>
+          </LiquidGlassButton>
 
-          {/* Skiper40 Animated Link for Explore Services */}
-          <div className="px-5 py-3">
+          {/* Skiper40 Animated Link inside Frosted Glass Pill */}
+          <div className="px-6 py-3.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md hover:bg-white/10 transition-colors">
             <Link001
               href="/services"
               className="text-xs font-semibold uppercase tracking-widest text-champagne-200 hover:text-champagne-100"
