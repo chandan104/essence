@@ -43,7 +43,17 @@ export default {
         'subtle': '0 4px 20px -2px rgba(25, 22, 20, 0.05)',
         'elevated': '0 12px 30px -4px rgba(25, 22, 20, 0.08)',
         'deep': '0 20px 40px -6px rgba(25, 22, 20, 0.12)',
-      }
+      },
+      animation: {
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+      },
+      keyframes: {
+        'border-beam': {
+          '100%': {
+            'offset-distance': '100%',
+          },
+        },
+      },
     },
   },
   plugins: [],

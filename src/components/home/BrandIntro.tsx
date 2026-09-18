@@ -1,14 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link001 } from "../ui/skiper-ui/skiper40";
 
 export const BrandIntro: React.FC = () => {
   return (
     <section id="brand-intro" className="py-20 sm:py-28 bg-studio-ivory relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Text narrative */}
-          <div className="lg:col-span-7 space-y-6">
+          {/* Text narrative with Framer Motion reveal */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-7 space-y-6"
+          >
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-champagne-600">
               <Sparkles className="w-3.5 h-3.5" />
               <span>The Essence Philosophy</span>
@@ -27,19 +34,24 @@ export const BrandIntro: React.FC = () => {
             </p>
 
             <div className="pt-2">
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-luxury text-studio-espresso hover:text-champagne-600 border-b border-studio-espresso hover:border-champagne-600 pb-1 transition-all group"
+              <Link001
+                href="/about"
+                className="inline-flex items-center text-xs font-semibold uppercase tracking-luxury text-studio-espresso hover:text-champagne-700"
               >
-                <span>Discover Essence</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+                Discover Essence
+              </Link001>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Editorial Visual Composition */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] overflow-hidden border border-studio-border shadow-elevated">
+          {/* Editorial Visual Composition with Framer Motion reveal */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            className="lg:col-span-5 relative"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden border border-studio-border shadow-elevated rounded-sm">
               <img
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop"
                 alt="Studio beauty detail"
@@ -56,7 +68,7 @@ export const BrandIntro: React.FC = () => {
                 Central Dimapur Studio
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

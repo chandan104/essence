@@ -10,6 +10,8 @@ import {
   ChevronRight,
   Flame,
 } from "lucide-react";
+import { motion } from "framer-motion";
+import { BorderBeam } from "../ui/border-beam";
 import { useServices } from "../../context/ServicesContext";
 import { ServiceItem } from "../../data/servicesData";
 import { SectionHeading } from "../common/SectionHeading";
@@ -113,16 +115,21 @@ export const SignatureServices: React.FC<SignatureServicesProps> = ({ onOpenBook
         >
           {/* Duplicate list twice to create seamless continuous looping without jumps */}
           {[...featuredList, ...featuredList].map((service, idx) => (
-            <div
+            <motion.div
               key={`${service.id}-${idx}`}
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="glow-card group relative flex-shrink-0 w-[280px] sm:w-[320px] aspect-[3/4] rounded-2xl overflow-hidden bg-studio-espresso border border-studio-border/90 shadow-elevated transition-all duration-500 flex flex-col justify-between"
             >
+              {/* VengeanceUI BorderBeam on Card */}
+              <BorderBeam size={160} duration={12} colorFrom="#E9DCBF" colorTo="#C5A880" borderWidth={1.2} />
+
               {/* Background Image with Zoom on Hover */}
               <div className="absolute inset-0 z-0">
                 <img
                   src={service.image}
                   alt={service.name}
-                  className="w-full h-full object-cover img-editorial opacity-85 group-hover:opacity-95"
+                  className="w-full h-full object-cover img-editorial opacity-85 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500"
                   loading="lazy"
                 />
                 {/* Dark Vignette Gradient */}
@@ -153,14 +160,14 @@ export const SignatureServices: React.FC<SignatureServicesProps> = ({ onOpenBook
                   </p>
                 </div>
 
-                {/* Pricing & Pill CTA Row (Matching reference image's price & purple pill) */}
+                {/* Pricing & Pill CTA Row */}
                 <div className="pt-2 border-t border-white/15 flex items-center justify-between gap-2">
                   <div>
                     <span className="text-[10px] uppercase tracking-widest text-champagne-300 block font-semibold">
                       Starting From
                     </span>
-                    <span className="text-xs font-bold text-white">
-                      ₹[PRICE] / Consult
+                    <span className="text-xs font-bold text-white line-clamp-1">
+                      {service.pricePlaceholder}
                     </span>
                   </div>
 
@@ -173,20 +180,22 @@ export const SignatureServices: React.FC<SignatureServicesProps> = ({ onOpenBook
                       Info
                     </Link>
 
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => {
                         analytics.trackBookingStart(service.name);
                         onOpenBooking(service.id);
                       }}
-                      className="px-3.5 py-1.5 rounded-full bg-champagne-500 hover:bg-champagne-400 text-studio-espresso text-xs font-bold uppercase tracking-luxury transition-all shadow-md flex items-center gap-1 active:scale-95"
+                      className="px-3 py-1.5 rounded-full bg-champagne-500 hover:bg-champagne-400 text-studio-espresso text-[11px] font-bold uppercase tracking-wider transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
                     >
-                      <Sparkles className="w-3 h-3 text-studio-espresso" />
+                      <Sparkles className="w-3 h-3" />
                       <span>Book</span>
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

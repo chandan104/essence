@@ -1,6 +1,30 @@
 import React from "react";
 import { UserCheck, Sparkles, Wand2, Compass } from "lucide-react";
+import { motion } from "framer-motion";
 import { SectionHeading } from "../common/SectionHeading";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const pillarVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
 
 export const WhyEssence: React.FC = () => {
   const pillars = [
@@ -40,11 +64,20 @@ export const WhyEssence: React.FC = () => {
           className="mb-14 sm:mb-16"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {pillars.map((pillar, idx) => (
-            <div
+            <motion.div
               key={pillar.title}
-              className="bg-studio-ivory border border-studio-border p-8 flex flex-col justify-between hover:border-champagne-500 transition-colors group shadow-subtle"
+              variants={pillarVariants}
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="bg-studio-ivory border border-studio-border p-8 flex flex-col justify-between hover:border-champagne-500 transition-colors group shadow-subtle rounded-sm"
             >
               <div>
                 <div className="w-12 h-12 rounded-none bg-studio-cream border border-studio-border flex items-center justify-center mb-6 group-hover:bg-champagne-100 transition-colors">
@@ -64,9 +97,9 @@ export const WhyEssence: React.FC = () => {
               <div className="mt-6 pt-4 border-t border-studio-border/60 text-[11px] font-medium text-champagne-700">
                 Church Road, Dimapur
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
