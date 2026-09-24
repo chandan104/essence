@@ -30,7 +30,11 @@ export function ServicesProvider({ children }: { children: React.ReactNode }) {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          // Merge with initial services so localKeywords and SEO tags are always present
+          return parsed.map((item) => {
+            const initial = initialServices.find((s) => s.id === item.id);
+            return initial ? { ...initial, ...item, localKeywords: item.localKeywords || initial.localKeywords } : item;
+          });
         }
       }
     } catch (e) {

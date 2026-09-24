@@ -38,6 +38,7 @@ export interface ServiceItem {
   featured: boolean;
   seoTitle: string;
   seoDescription: string;
+  localKeywords?: string[];
   suitabilityDisclaimer?: string;
   subStyles?: { name: string; description: string }[];
 }
@@ -77,7 +78,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Hair Colour in Dimapur | Essence Hair & Makeup Studio Church Road",
-    seoDescription: "Discover bespoke hair colouring, balayage, and highlights at Essence Hair and Makeup Studio on Church Road, Dimapur. Personalized shades and healthy hair focus."
+    seoDescription: "Discover bespoke hair colouring, balayage, and highlights at Essence Hair and Makeup Studio on Church Road, Dimapur. Personalized shades and healthy hair focus.",
+    localKeywords: [
+      
+      "hair colour dimapur",
+      "balayage dimapur nagaland",
+      "hair highlights church road",
+      "best hair colorist dimapur",
+      "global hair colour price dimapur",
+      "blonde balayage salon dimapur",
+      "hair dye salon near me dimapur",
+      "hair toning parlour church road"
+
+    ],
   },
   {
     id: "hair-extension",
@@ -109,7 +122,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Hair Extensions in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Premium hair extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Natural blending, lush volume, and custom styling."
+    seoDescription: "Premium hair extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Natural blending, lush volume, and custom styling.",
+    localKeywords: [
+      
+      "hair extensions dimapur",
+      "hair extensions nagaland",
+      "clip in hair extensions church road",
+      "tape in hair extensions dimapur",
+      "hair thickening salon dimapur",
+      "hair extensions cost dimapur",
+      "best hair extensions parlour nagaland",
+      "hair volume treatment dimapur"
+
+    ],
   },
   {
     id: "hair-smoothing",
@@ -141,7 +166,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Hair Smoothing & Straightening in Dimapur | Essence Studio",
-    seoDescription: "Professional hair smoothing and straightening at Essence Hair and Makeup Studio, Church Road, Dimapur. Long-lasting frizz control and mirror shine."
+    seoDescription: "Professional hair smoothing and straightening at Essence Hair and Makeup Studio, Church Road, Dimapur. Long-lasting frizz control and mirror shine.",
+    localKeywords: [
+      
+      "hair smoothing dimapur",
+      "hair straightening church road",
+      "permanent hair straightening dimapur",
+      "keratin hair smoothing nagaland",
+      "frizz control hair salon dimapur",
+      "hair rebonding dimapur price",
+      "best hair smoothing parlour dimapur",
+      "silky hair treatment church road"
+
+    ],
   },
   {
     id: "hair-botox",
@@ -173,7 +210,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Hair Botox Treatment in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Revitalize stressed hair with Hair Botox at Essence Hair and Makeup Studio, Church Road, Dimapur. Deep restoration, frizz reduction, and radiant gloss."
+    seoDescription: "Revitalize stressed hair with Hair Botox at Essence Hair and Makeup Studio, Church Road, Dimapur. Deep restoration, frizz reduction, and radiant gloss.",
+    localKeywords: [
+      
+      "hair botox dimapur",
+      "hair botox treatment nagaland",
+      "hair botox price in dimapur",
+      "best hair botox salon church road",
+      "hair botox vs keratin dimapur",
+      "hair botox near me dimapur",
+      "deep conditioning hair botox nagaland",
+      "frizzy hair repair salon dimapur"
+
+    ],
   },
   {
     id: "nanoplastia",
@@ -205,7 +254,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Nanoplastia Treatment in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Experience revolutionary Nanoplastia hair realignment at Essence Studio, Church Road, Dimapur. Formaldehyde-free straightening, high shine, and frizz control."
+    seoDescription: "Experience revolutionary Nanoplastia hair realignment at Essence Studio, Church Road, Dimapur. Formaldehyde-free straightening, high shine, and frizz control.",
+    localKeywords: [
+      
+      "nanoplastia treatment dimapur",
+      "nanoplastia price dimapur",
+      "nanoplastia nagaland",
+      "organic hair smoothing dimapur",
+      "nanoplastia church road dimapur",
+      "formaldehyde free hair straightening dimapur",
+      "best nanoplastia salon nagaland",
+      "hair smoothing nanoplastia dimapur"
+
+    ],
   },
   {
     id: "hair-spa",
@@ -236,7 +297,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Luxury Hair Spa in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Pamper your hair with our restorative Hair Spa at Essence Hair and Makeup Studio, Church Road, Dimapur. Deep conditioning and relaxing massage."
+    seoDescription: "Pamper your hair with our restorative Hair Spa at Essence Hair and Makeup Studio, Church Road, Dimapur. Deep conditioning and relaxing massage.",
+    localKeywords: [
+      
+      "hair spa dimapur",
+      "hair spa price dimapur",
+      "hair spa church road nagaland",
+      "deep conditioning hair spa dimapur",
+      "dandruff hair spa dimapur",
+      "hair spa near me dimapur",
+      "relaxing hair spa nagaland",
+      "dry hair damage repair dimapur"
+
+    ],
   },
   {
     id: "scalp-treatment",
@@ -267,7 +340,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Scalp Treatment & Massage in Dimapur | Essence Studio",
-    seoDescription: "Purifying scalp therapies and relaxing massages at Essence Hair and Makeup Studio, Church Road, Dimapur. Healthy roots, refreshed mind."
+    seoDescription: "Purifying scalp therapies and relaxing massages at Essence Hair and Makeup Studio, Church Road, Dimapur. Healthy roots, refreshed mind.",
+    localKeywords: [
+      
+      "scalp treatment dimapur",
+      "scalp massage church road",
+      "dandruff treatment salon dimapur",
+      "itchy scalp treatment nagaland",
+      "head massage salon dimapur",
+      "hair fall scalp care dimapur",
+      "scalp detox parlour church road"
+
+    ],
   },
   {
     id: "perming",
@@ -298,7 +382,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1584297091622-af8e5fd397d9?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Hair Perming & Curly Hair Styling in Dimapur | Essence Studio",
-    seoDescription: "Modern perming, beach waves, and curl texturizing at Essence Hair and Makeup Studio on Church Road, Dimapur. Lasting bounce and shape."
+    seoDescription: "Modern perming, beach waves, and curl texturizing at Essence Hair and Makeup Studio on Church Road, Dimapur. Lasting bounce and shape.",
+    localKeywords: [
+      
+      "hair perming dimapur",
+      "curly hair perm nagaland",
+      "digital perm salon dimapur",
+      "cold wave perm church road",
+      "hair curl treatment dimapur",
+      "permanent curls salon dimapur",
+      "wavy hair perm nagaland"
+
+    ],
   },
 
   // ==========================================
@@ -333,7 +428,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Gel Paint & Nail Art in Dimapur | Essence Studio Church Road",
-    seoDescription: "Artisanal nail art, chrome finishes, and long-lasting gel polish at Essence Hair and Makeup Studio, Church Road, Dimapur."
+    seoDescription: "Artisanal nail art, chrome finishes, and long-lasting gel polish at Essence Hair and Makeup Studio, Church Road, Dimapur.",
+    localKeywords: [
+      
+      "nail art dimapur",
+      "gel nail paint church road",
+      "nail studio dimapur nagaland",
+      "chrome nails dimapur",
+      "french tip nail art dimapur",
+      "trendy nail design salon dimapur",
+      "best nail artist dimapur",
+      "nail parlour church road dimapur"
+
+    ],
   },
   {
     id: "nail-extensions-acrylic",
@@ -364,7 +471,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Acrylic Nail Extensions in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Expert acrylic nail extensions, shaping, and fills at Essence Hair and Makeup Studio on Church Road, Dimapur. Durable, sculpted beauty."
+    seoDescription: "Expert acrylic nail extensions, shaping, and fills at Essence Hair and Makeup Studio on Church Road, Dimapur. Durable, sculpted beauty.",
+    localKeywords: [
+      
+      "acrylic nail extensions dimapur",
+      "acrylic nails price dimapur",
+      "acrylic nail salon church road",
+      "bridal acrylic nails nagaland",
+      "nail extensions near me dimapur",
+      "coffin acrylic nails dimapur",
+      "almond acrylic tips dimapur"
+
+    ],
   },
   {
     id: "nail-extensions-gel",
@@ -395,7 +513,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Gel Nail Extensions in Dimapur | Essence Studio Church Road",
-    seoDescription: "Lightweight, natural-looking gel nail extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Odorless and high-shine."
+    seoDescription: "Lightweight, natural-looking gel nail extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Odorless and high-shine.",
+    localKeywords: [
+      
+      "gel nail extensions dimapur",
+      "soft gel tips nagaland",
+      "builder gel nails church road",
+      "natural gel nail extensions dimapur",
+      "gel nails price dimapur",
+      "overlay gel nails dimapur",
+      "gel nail parlour nagaland"
+
+    ],
   },
   {
     id: "manicure",
@@ -426,7 +555,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Professional Manicure in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Pampering manicures, cuticle care, and hand massages at Essence Studio, Church Road, Dimapur. Clean, polished elegance."
+    seoDescription: "Pampering manicures, cuticle care, and hand massages at Essence Studio, Church Road, Dimapur. Clean, polished elegance.",
+    localKeywords: [
+      
+      "manicure dimapur",
+      "spa manicure church road",
+      "hand care salon dimapur",
+      "classic manicure nagaland",
+      "manicure price dimapur",
+      "cuticle care dimapur",
+      "bridal manicure parlour dimapur"
+
+    ],
   },
   {
     id: "pedicure",
@@ -457,7 +597,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Luxury Pedicure in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Relaxing foot spa rituals and pedicures at Essence Hair and Makeup Studio on Church Road, Dimapur. Soft feet, refined polish."
+    seoDescription: "Relaxing foot spa rituals and pedicures at Essence Hair and Makeup Studio on Church Road, Dimapur. Soft feet, refined polish.",
+    localKeywords: [
+      
+      "pedicure dimapur",
+      "spa pedicure church road",
+      "foot spa dimapur nagaland",
+      "cracked heel pedicure dimapur",
+      "pedicure price dimapur",
+      "medical pedicure nagaland",
+      "relaxing foot massage parlour dimapur"
+
+    ],
   },
   {
     id: "toe-nail-extensions",
@@ -488,7 +639,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Toe Nail Extensions in Dimapur | Essence Studio Church Road",
-    seoDescription: "Flawless toe nail extensions and reconstruction at Essence Hair and Makeup Studio, Church Road, Dimapur. Symmetrical, elegant beauty."
+    seoDescription: "Flawless toe nail extensions and reconstruction at Essence Hair and Makeup Studio, Church Road, Dimapur. Symmetrical, elegant beauty.",
+    localKeywords: [
+      
+      "toe nail extensions dimapur",
+      "toenail restoration church road",
+      "toenail art nagaland",
+      "pedicure with extensions dimapur",
+      "toe nail extension price dimapur",
+      "aesthetic toe nails nagaland"
+
+    ],
   },
 
   // ==========================================
@@ -523,7 +684,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Facial & Clean Up in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Deeply purifying facials and clean-up treatments at Essence Hair and Makeup Studio, Church Road, Dimapur. Refreshed, clear skin."
+    seoDescription: "Deeply purifying facials and clean-up treatments at Essence Hair and Makeup Studio, Church Road, Dimapur. Refreshed, clear skin.",
+    localKeywords: [
+      
+      "facial cleanup dimapur",
+      "face cleanup church road",
+      "skin cleanup price dimapur",
+      "blackhead removal dimapur",
+      "glow facial cleanup nagaland",
+      "parlour cleanup near me dimapur",
+      "skin cleansing facial dimapur"
+
+    ],
   },
   {
     id: "gold-facial",
@@ -554,7 +726,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1512290900672-1f50ff5231b5?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Gold Facial in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Luminous Gold Facial treatments at Essence Studio on Church Road, Dimapur. Bridal glow and festive skin radiance."
+    seoDescription: "Luminous Gold Facial treatments at Essence Studio on Church Road, Dimapur. Bridal glow and festive skin radiance.",
+    localKeywords: [
+      
+      "gold facial dimapur",
+      "gold facial price dimapur",
+      "bridal gold facial church road",
+      "radiant gold facial dimapur",
+      "glow facial parlour dimapur nagaland",
+      "gold facial near me dimapur",
+      "luxury facial dimapur"
+
+    ],
   },
   {
     id: "brightening-facial",
@@ -585,7 +768,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Brightening & De-Tan Facial in Dimapur | Essence Studio",
-    seoDescription: "Revitalize uneven skin tone with our Brightening Facial at Essence Hair and Makeup Studio, Church Road, Dimapur. Safe, glowing results."
+    seoDescription: "Revitalize uneven skin tone with our Brightening Facial at Essence Hair and Makeup Studio, Church Road, Dimapur. Safe, glowing results.",
+    localKeywords: [
+      
+      "brightening facial dimapur",
+      "skin whitening facial nagaland",
+      "de tan facial church road",
+      "hyperpigmentation facial dimapur",
+      "skin glow treatment dimapur",
+      "brightening facial price dimapur",
+      "tan removal salon dimapur"
+
+    ],
   },
   {
     id: "anti-aging-facial",
@@ -616,7 +810,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Anti-Aging Facial in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Firming and rejuvenating anti-aging facials at Essence Hair and Makeup Studio, Church Road, Dimapur. Youthful bounce and hydration."
+    seoDescription: "Firming and rejuvenating anti-aging facials at Essence Hair and Makeup Studio, Church Road, Dimapur. Youthful bounce and hydration.",
+    localKeywords: [
+      
+      "anti aging facial dimapur",
+      "wrinkle reduction facial nagaland",
+      "skin firming treatment church road",
+      "collagen facial dimapur",
+      "mature skin facial dimapur",
+      "anti aging treatment price dimapur"
+
+    ],
   },
   {
     id: "hydra-facial",
@@ -648,7 +852,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1512290900672-1f50ff5231b5?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Hydra Facial in Dimapur | Essence Hair & Makeup Studio Church Road",
-    seoDescription: "Experience instant glass skin with our Hydra Facial at Essence Hair and Makeup Studio on Church Road, Dimapur. Deep vortex cleanse and intense hydration."
+    seoDescription: "Experience instant glass skin with our Hydra Facial at Essence Hair and Makeup Studio on Church Road, Dimapur. Deep vortex cleanse and intense hydration.",
+    localKeywords: [
+      
+      "hydra facial dimapur",
+      "hydra facial price in dimapur",
+      "hydra facial nagaland",
+      "hydrafacial church road dimapur",
+      "deep pore hydra facial dimapur",
+      "best hydra facial clinic dimapur",
+      "hydra facial cost nagaland",
+      "hydra dermabrasion dimapur"
+
+    ],
   },
   {
     id: "acne-treatment",
@@ -680,7 +896,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Clarifying Acne Treatment in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Gentle cosmetic acne balancing facials at Essence Hair and Makeup Studio, Church Road, Dimapur. Clarifying care and soothing pore hygiene."
+    seoDescription: "Gentle cosmetic acne balancing facials at Essence Hair and Makeup Studio, Church Road, Dimapur. Clarifying care and soothing pore hygiene.",
+    localKeywords: [
+      
+      "acne treatment dimapur",
+      "acne facial nagaland",
+      "pimple treatment salon church road",
+      "blemish control facial dimapur",
+      "acne marks facial dimapur",
+      "clogged pores treatment dimapur",
+      "acne reduction salon nagaland"
+
+    ],
   },
 
   // ==========================================
@@ -723,7 +950,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Eyelash Extensions in Dimapur | Classic, Hybrid, Volume | Essence Studio",
-    seoDescription: "Exquisite eyelash extensions on Church Road, Dimapur. Classic, Hybrid, Volume, and Anime lash styles at Essence Hair and Makeup Studio."
+    seoDescription: "Exquisite eyelash extensions on Church Road, Dimapur. Classic, Hybrid, Volume, and Anime lash styles at Essence Hair and Makeup Studio.",
+    localKeywords: [
+      
+      "eyelash extensions dimapur",
+      "lash extensions nagaland",
+      "eyelash extension studio church road",
+      "best lash artist dimapur",
+      "eyelash extension price dimapur",
+      "semi permanent lashes dimapur",
+      "lash studio near me dimapur",
+      "lash refill dimapur"
+
+    ],
   },
   {
     id: "classic-lashes",
@@ -754,7 +993,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Classic Lash Extensions in Dimapur | Essence Studio",
-    seoDescription: "Clean, natural 1:1 classic lash extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Lightweight and elegant."
+    seoDescription: "Clean, natural 1:1 classic lash extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Lightweight and elegant.",
+    localKeywords: [
+      
+      "classic eyelash extensions dimapur",
+      "natural lash extensions nagaland",
+      "classic 1 on 1 lashes church road",
+      "everyday classic lashes dimapur",
+      "classic lash price dimapur",
+      "subtle eyelash extensions dimapur"
+
+    ],
   },
   {
     id: "hybrid-lashes",
@@ -785,7 +1034,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Hybrid Lash Extensions in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Wispy, textured Hybrid lash extensions at Essence Studio, Church Road, Dimapur. The perfect blend of classic and volume."
+    seoDescription: "Wispy, textured Hybrid lash extensions at Essence Studio, Church Road, Dimapur. The perfect blend of classic and volume.",
+    localKeywords: [
+      
+      "hybrid lash extensions dimapur",
+      "textured lashes nagaland",
+      "hybrid eyelash extension church road",
+      "hybrid lash set dimapur",
+      "wispy hybrid lashes dimapur",
+      "hybrid lashes price nagaland"
+
+    ],
   },
   {
     id: "volume-lashes",
@@ -816,7 +1075,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Volume Lash Extensions in Dimapur | Essence Studio Church Road",
-    seoDescription: "Plush, velvety Volume lash extensions at Essence Hair and Makeup Studio on Church Road, Dimapur. Fluffy fullness and dramatic eyes."
+    seoDescription: "Plush, velvety Volume lash extensions at Essence Hair and Makeup Studio on Church Road, Dimapur. Fluffy fullness and dramatic eyes.",
+    localKeywords: [
+      
+      "volume lash extensions dimapur",
+      "russian volume lashes nagaland",
+      "mega volume lashes church road",
+      "full dramatic lashes dimapur",
+      "volume eyelash price dimapur",
+      "volume lash studio dimapur"
+
+    ],
   },
   {
     id: "anime-lashes",
@@ -847,7 +1116,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Anime & Manga Lash Extensions in Dimapur | Essence Studio",
-    seoDescription: "Trendy Anime and Manga doll-eye eyelash extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Spiky peaks and open-eye lift."
+    seoDescription: "Trendy Anime and Manga doll-eye eyelash extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Spiky peaks and open-eye lift.",
+    localKeywords: [
+      
+      "manga lashes dimapur",
+      "anime lash extensions nagaland",
+      "spiky doll eye lashes church road",
+      "korean lash extensions dimapur",
+      "manga eyelash price dimapur",
+      "cosplay lashes dimapur"
+
+    ],
   },
   {
     id: "custom-lashes",
@@ -878,7 +1157,17 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Custom Eyelash Extensions in Dimapur | Essence Studio",
-    seoDescription: "Bespoke eye-mapped lash extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Precision styling for your unique eye shape."
+    seoDescription: "Bespoke eye-mapped lash extensions at Essence Hair and Makeup Studio, Church Road, Dimapur. Precision styling for your unique eye shape.",
+    localKeywords: [
+      
+      "customized eyelash extensions dimapur",
+      "cat eye lash extensions nagaland",
+      "doll eye lashes church road",
+      "tailored lash mapping dimapur",
+      "bridal eyelash extensions dimapur",
+      "custom lash styling nagaland"
+
+    ],
   },
   {
     id: "lash-lift",
@@ -910,7 +1199,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Eyelash Lift & Tint in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Natural eyelash lifting and perming at Essence Hair and Makeup Studio on Church Road, Dimapur. Semi-permanent curl, zero maintenance."
+    seoDescription: "Natural eyelash lifting and perming at Essence Hair and Makeup Studio on Church Road, Dimapur. Semi-permanent curl, zero maintenance.",
+    localKeywords: [
+      
+      "lash lift dimapur",
+      "keratin lash lift nagaland",
+      "eyelash perming church road",
+      "lash lift and tint dimapur",
+      "lash lift price dimapur",
+      "natural curl lashes dimapur",
+      "lash lamination nagaland"
+
+    ],
   },
 
   // ==========================================
@@ -948,7 +1248,19 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1200&auto=format&fit=crop",
     featured: true,
     seoTitle: "Microblading Eyebrows in Dimapur | Essence Hair & Makeup Studio",
-    seoDescription: "Hyper-realistic microblading hair-stroke brows at Essence Hair and Makeup Studio, Church Road, Dimapur. Symmetrical, natural definition."
+    seoDescription: "Hyper-realistic microblading hair-stroke brows at Essence Hair and Makeup Studio, Church Road, Dimapur. Symmetrical, natural definition.",
+    localKeywords: [
+      
+      "microblading dimapur",
+      "eyebrow microblading nagaland",
+      "microblading church road dimapur",
+      "semi permanent eyebrow tattoo dimapur",
+      "microblading price dimapur",
+      "hair stroke brows nagaland",
+      "best microblading artist dimapur",
+      "eyebrow shaping dimapur"
+
+    ],
   },
   {
     id: "microshading",
@@ -980,7 +1292,18 @@ export const servicesData: ServiceItem[] = [
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     featured: false,
     seoTitle: "Microshading Ombré Brows in Dimapur | Essence Studio",
-    seoDescription: "Velvety ombré powder microshading at Essence Hair and Makeup Studio, Church Road, Dimapur. Long-lasting, defined brow beauty."
+    seoDescription: "Velvety ombré powder microshading at Essence Hair and Makeup Studio, Church Road, Dimapur. Long-lasting, defined brow beauty.",
+    localKeywords: [
+      
+      "microshading dimapur",
+      "powder brows nagaland",
+      "ombre powder brows church road",
+      "microshading price dimapur",
+      "semi permanent powder brows dimapur",
+      "microshading vs microblading dimapur",
+      "eyebrow tattoo salon nagaland"
+
+    ],
   }
 ];
 

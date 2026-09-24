@@ -51,7 +51,23 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       metaKwTag.setAttribute("content", keywords);
     }
 
-    // 4. OpenGraph tags
+    // 4. Local SEO Geo Tags
+    const updateNamedMeta = (name: string, content: string) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    updateNamedMeta("geo.region", "IN-NL");
+    updateNamedMeta("geo.placename", "Dimapur");
+    updateNamedMeta("geo.position", "25.9080;93.7214");
+    updateNamedMeta("ICBM", "25.9080, 93.7214");
+
+    // 5. OpenGraph & Twitter tags
     const updateOgTag = (property: string, content: string) => {
       let tag = document.querySelector(`meta[property="${property}"]`);
       if (!tag) {
@@ -66,8 +82,15 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
     updateOgTag("og:description", metaDescription);
     updateOgTag("og:url", canonicalUrl);
     updateOgTag("og:image", image);
+    updateOgTag("og:site_name", siteConfig.brand.name);
+    updateOgTag("og:locale", "en_IN");
 
-    // 5. Canonical link
+    updateNamedMeta("twitter:card", "summary_large_image");
+    updateNamedMeta("twitter:title", fullTitle);
+    updateNamedMeta("twitter:description", metaDescription);
+    updateNamedMeta("twitter:image", image);
+
+    // 6. Canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement("link");

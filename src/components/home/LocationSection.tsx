@@ -66,6 +66,28 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                 </p>
               </div>
 
+                            {/* Landmark Transit Proximity */}
+              <div className="border-t border-white/10 pt-4">
+                <span className="text-xs font-semibold tracking-luxury uppercase text-white flex items-center gap-2 mb-3">
+                  <Navigation className="w-3.5 h-3.5 text-champagne-400" />
+                  Key Landmarks & Proximity
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-slate-300">
+                    <p className="font-semibold text-white">5 Mins</p>
+                    <p className="text-[11px] text-slate-400">Railway Station & Hong Kong Market</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-slate-300">
+                    <p className="font-semibold text-white">7 Mins</p>
+                    <p className="text-[11px] text-slate-400">City Tower & Nyamo Lotha Rd</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-slate-300">
+                    <p className="font-semibold text-white">Direct Access</p>
+                    <p className="text-[11px] text-slate-400">Chümoukedima via NH-29 (AH1)</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Hours */}
               <div className="border-t border-white/10 pt-4">
                 <span className="text-xs font-semibold tracking-luxury uppercase text-white flex items-center gap-2 mb-3">

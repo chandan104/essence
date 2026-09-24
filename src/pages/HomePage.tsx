@@ -25,7 +25,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBooking }) => {
       <SeoHead
         title="Essence Hair and Makeup Studio | Church Road, Dimapur"
         description="Premium beauty studio on Church Road, Dimapur, Nagaland. Hair colour, Hair Botox, Nanoplastia, sculpted nails, Hydra Facials, eyelash extensions, and microblading."
-        keywords="salon in dimapur, beauty parlour dimapur, hair botox dimapur, nanoplastia dimapur, church road dimapur salon, lash extensions nagaland, microblading dimapur"
+        keywords="salon in dimapur, best salon in dimapur, beauty parlour in dimapur, hair botox dimapur, nanoplastia dimapur, church road dimapur salon, best hair salon nagaland, nail extensions dimapur, hydra facial dimapur price, eyelash extensions dimapur, microblading dimapur nagaland, salon near me dimapur, top beauty studio dimapur"
         canonicalPath="/"
         jsonLd={localBusinessSchema}
       />
